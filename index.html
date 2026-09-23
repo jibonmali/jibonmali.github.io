@@ -157,30 +157,52 @@
             margin-bottom: 10px;
         }
 
-        .experience {
-            max-width: 900px;
-            margin: auto;
-        }
+.experience {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
 
-        .experience-card {
-            background: white;
-            padding: 30px;
-            border-left: 5px solid #1e3a8a;
-            border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
+.experience-card {
+    background: white;
+    padding: 30px;
+    border-left: 5px solid #1e3a8a;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
 
-        .experience-card h3 {
-            color: #1e3a8a;
-        }
+.experience-card h3 {
+    color: #1e3a8a;
+    margin-top: 0;
+}
 
-        .experience-card .date {
-            color: #64748b;
-            margin: 5px 0 15px;
-        }
+.experience-card .date {
+    color: #64748b;
+    margin: 5px 0 15px;
+}
 
-        .experience-card ul {
-            padding-left: 20px;
+.experience-card ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.experience-card li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+/* Mobile view */
+@media (max-width: 768px) {
+
+    .experience {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+}
         }
 
         .education-container,
