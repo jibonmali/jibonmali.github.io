@@ -5,44 +5,603 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Jibon Chandra Mali | IT Officer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            color: #38bdf8;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #e2e8f0;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            color: #0f172a;
+        }
+
+        .section-title p {
+            color: #64748b;
+            margin-top: 8px;
+        }
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .skill-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        .experience {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .experience-card {
+            background: white;
+            padding: 30px;
+            border-left: 5px solid #1e3a8a;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .experience-card h3 {
+            color: #1e3a8a;
+        }
+
+        .experience-card .date {
+            color: #64748b;
+            margin: 5px 0 15px;
+        }
+
+        .experience-card ul {
+            padding-left: 20px;
+        }
+
+        .education-container,
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        .contact {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 17px;
+        }
+
+        .contact-info a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #020617;
+            color: #94a3b8;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Jibon Chandra Mali</h1>
+<header>
+    <nav>
+        <div class="logo">Jibon Chandra Mali</div>
 
-    <h2>IT Officer | IT Support & Technical Troubleshooting</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>Jibon Chandra Mali</h1>
+
+        <h2>IT Officer | IT Support & Technical Troubleshooting</h2>
+
+        <p>
+            IT professional specializing in hardware and software troubleshooting,
+            Windows installation, networking, printer configuration,
+            Microsoft 365 and technical support.
+        </p>
+
+        <a href="#contact" class="btn">Contact Me</a>
+
+        <a href="#experience" class="btn">View Experience</a>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="section-title">
+        <h2>About Me</h2>
+        <p>Professional Profile</p>
+    </div>
+
+    <div class="about">
+
+        <p>
+            I am an IT professional with hands-on experience in IT support,
+            hardware and software troubleshooting, computer systems,
+            networking and technical operations.
+        </p>
+
+        <br>
+
+        <p>
+            My areas of expertise include Windows installation and configuration,
+            printer installation and IP configuration, Microsoft 365 installation,
+            laptop and desktop setup, LAN troubleshooting and IT asset management.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <div class="section-title">
+        <h2>Technical Skills</h2>
+        <p>My core IT capabilities</p>
+    </div>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <h3>IT Support</h3>
+            <p>Hardware and software troubleshooting and end-user technical support.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Windows</h3>
+            <p>Windows installation, configuration, activation and troubleshooting.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Networking</h3>
+            <p>LAN setup, IP configuration and basic network troubleshooting.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Printer Support</h3>
+            <p>Printer installation, IP printer configuration and troubleshooting.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Microsoft 365</h3>
+            <p>Microsoft 365 installation, setup and user support.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Computer Setup</h3>
+            <p>Laptop and desktop setup, software installation and configuration.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>IT Asset Management</h3>
+            <p>Hardware inventory, documentation and IT asset tracking.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>User Support</h3>
+            <p>Technical assistance for staff, faculty and students.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+    <div class="section-title">
+        <h2>Work Experience</h2>
+        <p>Professional Experience</p>
+    </div>
+
+    <div class="experience">
+
+        <div class="experience-card">
+
+            <h3>IT Officer</h3>
+
+            <div class="date">
+                BRAC Institute of Governance and Development (BIGD)
+            </div>
+
+            <div class="date">
+                January 2025 - Present
+            </div>
+
+            <ul>
+
+                <li>Provide IT support and technical troubleshooting.</li>
+
+                <li>Maintain computer lab systems and IT equipment.</li>
+
+                <li>Install and configure Windows operating systems.</li>
+
+                <li>Install and configure printers and IP printers.</li>
+
+                <li>Provide hardware and software troubleshooting.</li>
+
+                <li>Install and configure Microsoft 365 applications.</li>
+
+                <li>Support laptop and desktop setup.</li>
+
+                <li>Maintain IT asset inventory and documentation.</li>
+
+                <li>Provide technical support to students, faculty and staff.</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+    <div class="section-title">
+        <h2>Education</h2>
+        <p>Academic Background</p>
+    </div>
+
+    <div class="education-container">
+
+        <div class="card">
+
+            <h3>BSc in Computer Science & Engineering</h3>
+
+            <p>
+                Daffodil International University
+            </p>
+
+            <p>
+                CGPA: 3.00
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Diploma in Computer Engineering</h3>
+
+            <p>
+                Patuakhali Polytechnic Institute
+            </p>
+
+            <p>
+                CGPA: 3.06
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Secondary School Certificate</h3>
+
+            <p>
+                Business Studies
+            </p>
+
+            <p>
+                CGPA: 4.56
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <div class="section-title">
+
+        <h2>IT Projects & Work</h2>
+
+        <p>Selected technical work</p>
+
+    </div>
+
+
+    <div class="projects-container">
+
+
+        <div class="card">
+
+            <h3>IP Printer Configuration</h3>
+
+            <p>
+                Installation and configuration of network printers
+                using IP addresses and troubleshooting printing issues.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Windows System Setup</h3>
+
+            <p>
+                Windows installation, activation, driver setup,
+                software installation and system configuration.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Computer Lab Support</h3>
+
+            <p>
+                Maintenance and troubleshooting of computer lab
+                systems and related IT equipment.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>IT Asset Management</h3>
+
+            <p>
+                Hardware inventory management, asset documentation
+                and equipment tracking.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="section-title">
+
+        <h2>Contact Me</h2>
+
+        <p>Let's connect</p>
+
+    </div>
+
+
+    <div class="contact-info">
+
+        <p>Email:
+            <a href="mailto:your-email@example.com">
+                your-email@example.com
+            </a>
+        </p>
+
+        <p>Location: Dhaka, Bangladesh</p>
+
+        <br>
+
+        <a href="mailto:your-email@example.com" class="btn">
+            Send Email
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
 
     <p>
-        Welcome to my personal portfolio website.
+        © 2026 Jibon Chandra Mali. All Rights Reserved.
     </p>
 
-    <hr>
+</footer>
 
-    <h2>About Me</h2>
-
-    <p>
-        I am an IT professional with experience in IT support,
-        hardware and software troubleshooting, Windows installation,
-        networking, printer configuration and Microsoft 365 setup.
-    </p>
-
-    <h2>Technical Skills</h2>
-
-    <ul>
-        <li>IT Support & Technical Troubleshooting</li>
-        <li>Windows Installation & Configuration</li>
-        <li>Hardware Troubleshooting</li>
-        <li>Printer Installation & IP Configuration</li>
-        <li>LAN & Network Troubleshooting</li>
-        <li>Microsoft 365 Installation</li>
-        <li>Laptop & Desktop Setup</li>
-        <li>IT Asset Management</li>
-    </ul>
-
-    <h2>Contact</h2>
-
-    <p>Email: your-email@example.com</p>
 
 </body>
 </html>
