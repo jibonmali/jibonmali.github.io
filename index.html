@@ -1,248 +1,876 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Jibon Chandra Mali - IT Officer | IT Support & Technical Troubleshooting">
-
     <title>Jibon Chandra Mali | IT Officer</title>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1f2937;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .light-section {
+            background: #f7f9fc;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.97);
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .nav-container {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            color: #1e3a8a;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #374151;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #eff6ff, #ffffff);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.4fr 0.8fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .small-title {
+            color: #2563eb;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.15;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .hero h2 {
+            font-size: 30px;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .hero-description {
+            font-size: 20px;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 15px;
+        }
+
+        .hero-about {
+            max-width: 650px;
+            color: #6b7280;
+            margin-bottom: 25px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .primary-btn {
+            background: #2563eb;
+            color: white;
+        }
+
+        .primary-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .secondary-btn {
+            border: 2px solid #2563eb;
+            color: #2563eb;
+        }
+
+        .secondary-btn:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #ffffff;
+            color: #2563eb;
+            font-size: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #2563eb;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           HERO IMAGE
+        ========================= */
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-border {
+            width: 330px;
+            height: 330px;
+            padding: 10px;
+            border-radius: 50%;
+            background: #2563eb;
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.25);
+        }
+
+        .image-border img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid white;
+        }
+
+
+        /* =========================
+           SECTION TITLE
+        ========================= */
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            color: #2563eb;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            color: #111827;
+            margin-top: 5px;
+        }
+
+        .line {
+            width: 60px;
+            height: 4px;
+            background: #2563eb;
+            margin: 12px auto 0;
+            border-radius: 10px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-text p {
+            color: #4b5563;
+            margin-bottom: 18px;
+            font-size: 16px;
+        }
+
+        .about-info {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+        }
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-item strong {
+            color: #111827;
+        }
+
+        .info-item span {
+            color: #2563eb;
+            text-align: right;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 30px 22px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            border-color: #bfdbfe;
+        }
+
+        .skill-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #eff6ff;
+            color: #2563eb;
+            font-size: 25px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+            color: #111827;
+            font-size: 18px;
+        }
+
+        .skill-card p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           EXPERIENCE
+           TWO BOXES SIDE BY SIDE
+        ========================= */
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            align-items: stretch;
+        }
+
+        .experience-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #2563eb;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            transition: 0.3s;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 22px;
+        }
+
+        .experience-card h3 {
+            color: #1e3a8a;
+            font-size: 23px;
+            margin-bottom: 5px;
+        }
+
+        .experience-card h4 {
+            color: #374151;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .experience-date {
+            background: #eff6ff;
+            color: #2563eb;
+            padding: 6px 12px;
+            border-radius: 20px;
+            white-space: nowrap;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .experience-card ul {
+            padding-left: 20px;
+        }
+
+        .experience-card li {
+            color: #4b5563;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .education-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            transition: 0.3s;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .education-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eff6ff;
+            color: #2563eb;
+            border-radius: 50%;
+            font-size: 24px;
+        }
+
+        .education-card h3 {
+            font-size: 18px;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+
+        .education-card p {
+            color: #4b5563;
+            margin-bottom: 10px;
+        }
+
+        .education-card span {
+            display: block;
+            color: #2563eb;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .education-card small {
+            color: #6b7280;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            padding: 35px 30px;
+            background: white;
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-icon {
+            font-size: 35px;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .project-card h3 {
+            color: #111827;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-section {
+            background: #f7f9fc;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .contact-icon {
+            font-size: 28px;
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h3 {
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .contact-card a {
+            color: #2563eb;
+            font-size: 13px;
+            word-break: break-word;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #111827;
+            color: #d1d5db;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 14px;
+        }
+
+        footer p:first-child {
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            nav {
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text {
+                order: 2;
+            }
+
+            .hero-image {
+                order: 1;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 25px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .image-border {
+                width: 250px;
+                height: 250px;
+            }
+
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            /* EXPERIENCE MOBILE */
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-header {
+                flex-direction: column;
+            }
+
+            .experience-date {
+                display: inline-block;
+            }
+
+
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 500px) {
+
+            .container {
+                width: 92%;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-card {
+                padding: 22px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<!-- ================= HEADER ================= -->
 
-<header class="header">
+    <!-- =========================
+         NAVBAR
+    ========================= -->
 
-    <nav class="navbar container">
+    <header class="navbar">
 
-        <a href="#home" class="logo">
-            Jibon<span>.</span>
-        </a>
+        <div class="container nav-container">
 
-        <ul class="nav-links">
-
-            <li><a href="#home">Home</a></li>
-
-            <li><a href="#about">About</a></li>
-
-            <li><a href="#skills">Skills</a></li>
-
-            <li><a href="#experience">Experience</a></li>
-
-            <li><a href="#education">Education</a></li>
-
-            <li><a href="#projects">Projects</a></li>
-
-            <li><a href="#contact">Contact</a></li>
-
-        </ul>
-
-    </nav>
-
-</header>
-
-
-<main>
-
-
-<!-- ================= HERO ================= -->
-
-<section class="hero" id="home">
-
-    <div class="hero-content container">
-
-        <div class="hero-photo">
-
-            <img src="profile.jpg"
-                 alt="Jibon Chandra Mali">
-
-        </div>
-
-
-        <p class="eyebrow">
-            IT PROFESSIONAL
-        </p>
-
-
-        <h1>
-            Jibon Chandra Mali
-        </h1>
-
-
-        <h2>
-            IT Officer
-            <span>|</span>
-            IT Support & Technical Troubleshooting
-        </h2>
-
-
-        <p class="hero-text">
-
-            IT professional with hands-on experience in hardware and
-            software troubleshooting, Windows installation and configuration,
-            networking, printer configuration, Microsoft 365 and
-            end-user technical support.
-
-        </p>
-
-
-        <div class="hero-buttons">
-
-            <a href="#contact"
-               class="btn btn-primary">
-                Contact Me
+            <a href="#home" class="logo">
+                Jibon<span>Mali</span>
             </a>
 
-            <a href="#experience"
-               class="btn btn-outline">
-                View Experience
-            </a>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
         </div>
 
-
-        <div class="social-links">
-
-            <a href="https://github.com/jibonmali"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                GitHub
-
-            </a>
+    </header>
 
 
-            <!-- Replace YOUR_LINKEDIN_URL -->
+    <!-- =========================
+         HERO
+    ========================= -->
 
-            <a href="YOUR_LINKEDIN_URL"
-               target="_blank"
-               rel="noopener noreferrer">
+    <section id="home" class="hero">
 
-                LinkedIn
+        <div class="container hero-content">
 
-            </a>
+            <div class="hero-text">
 
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about" class="section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p class="section-label">
-                PROFILE
-            </p>
-
-            <h2>
-                About Me
-            </h2>
-
-        </div>
-
-
-        <div class="about-grid">
-
-
-            <div class="about-text">
-
-                <p>
-
-                    I am an IT professional currently working as an
-                    <strong>
-                        IT Officer at BRAC Institute of Governance and Development (BIGD), BRAC University.
-                    </strong>
-
-                    I provide day-to-day technical support and help maintain
-                    computer systems, IT equipment and user environments.
-
+                <p class="small-title">
+                    Hello, I'm
                 </p>
 
+                <h1>
+                    Jibon Chandra Mali
+                </h1>
 
-                <p>
+                <h2>
+                    IT Officer
+                </h2>
 
-                    My practical experience includes hardware and software
-                    troubleshooting, Windows installation and configuration,
-                    printer installation and IP configuration, Microsoft 365
-                    installation, networking support, computer setup and
-                    IT asset management.
-
+                <p class="hero-description">
+                    IT Officer | IT Support & Technical Troubleshooting
                 </p>
 
-
-                <p>
-
-                    I enjoy solving technical problems, supporting users and
-                    learning new technologies that improve IT operations.
-
+                <p class="hero-about">
+                    Experienced IT professional specializing in hardware,
+                    software, networking, system configuration, printer
+                    support and technical troubleshooting.
                 </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#contact" class="btn primary-btn">
+                        Contact Me
+                    </a>
+
+                    <a href="#experience" class="btn secondary-btn">
+                        My Experience
+                    </a>
+
+                </div>
+
+                <div class="social-links">
+
+                    <a href="https://github.com/jibonmali"
+                       target="_blank"
+                       title="GitHub">
+
+                        <i class="fab fa-github"></i>
+
+                    </a>
+
+                    <a href="YOUR_LINKEDIN_URL"
+                       target="_blank"
+                       title="LinkedIn">
+
+                        <i class="fab fa-linkedin"></i>
+
+                    </a>
+
+                </div>
 
             </div>
 
 
-            <div class="about-card">
+            <div class="hero-image">
 
-                <div class="info-row">
+                <div class="image-border">
 
-                    <span>
-                        Current Role
-                    </span>
-
-                    <strong>
-                        IT Officer
-                    </strong>
-
-                </div>
-
-
-                <div class="info-row">
-
-                    <span>
-                        Organization
-                    </span>
-
-                    <strong>
-                        BIGD, BRAC University
-                    </strong>
-
-                </div>
-
-
-                <div class="info-row">
-
-                    <span>
-                        Location
-                    </span>
-
-                    <strong>
-                        Dhaka, Bangladesh
-                    </strong>
-
-                </div>
-
-
-                <div class="info-row">
-
-                    <span>
-                        Focus
-                    </span>
-
-                    <strong>
-                        IT Support & Troubleshooting
-                    </strong>
+                    <img src="profile.jpg"
+                         alt="Jibon Chandra Mali">
 
                 </div>
 
@@ -250,2040 +878,698 @@
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
+    <!-- =========================
+         ABOUT
+    ========================= -->
 
-<!-- ================= SKILLS ================= -->
+    <section id="about" class="section">
 
-<section id="skills"
-         class="section section-light">
+        <div class="container">
 
-    <div class="container">
+            <div class="section-title">
+
+                <span>About Me</span>
+
+                <h2>Professional Profile</h2>
+
+                <div class="line"></div>
+
+            </div>
 
 
-        <div class="section-heading center">
+            <div class="about-content">
 
-            <p class="section-label">
-                EXPERTISE
-            </p>
+                <div class="about-text">
 
-            <h2>
-                Technical Skills
-            </h2>
+                    <p>
+                        I am an IT professional currently working as an
+                        IT Officer at the BRAC Institute of Governance and
+                        Development (BIGD), BRAC University.
+                    </p>
 
-            <p>
-                Core IT skills and areas of practical experience
-            </p>
+                    <p>
+                        I have practical experience in IT support,
+                        hardware and software troubleshooting, Windows
+                        installation and configuration, printer setup,
+                        networking and Microsoft 365 support.
+                    </p>
+
+                    <p>
+                        My responsibilities also include IT asset
+                        management, system maintenance, user support and
+                        troubleshooting day-to-day technical issues.
+                    </p>
+
+                </div>
+
+
+                <div class="about-info">
+
+                    <div class="info-item">
+                        <strong>Position</strong>
+                        <span>IT Officer</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Organization</strong>
+                        <span>BIGD, BRAC University</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Experience</strong>
+                        <span>4+ Years</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Location</strong>
+                        <span>Dhaka, Bangladesh</span>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-
-        <div class="skills-grid">
-
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    01
-                </div>
-
-                <h3>
-                    IT Support
-                </h3>
-
-                <p>
-                    End-user support, technical troubleshooting
-                    and day-to-day IT operations.
-                </p>
-
-            </div>
+    </section>
 
 
+    <!-- =========================
+         SKILLS
+    ========================= -->
 
-            <div class="skill-card">
+    <section id="skills" class="section light-section">
 
-                <div class="skill-icon">
-                    02
-                </div>
+        <div class="container">
 
-                <h3>
-                    Hardware
-                </h3>
+            <div class="section-title">
 
-                <p>
-                    PC, laptop, monitor and peripheral setup,
-                    maintenance and troubleshooting.
-                </p>
+                <span>My Skills</span>
+
+                <h2>Technical Skills</h2>
+
+                <div class="line"></div>
 
             </div>
 
 
+            <div class="skills-grid">
 
-            <div class="skill-card">
 
-                <div class="skill-icon">
-                    03
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+
+                    <h3>Hardware Support</h3>
+
+                    <p>
+                        Desktop, laptop, printer and peripheral
+                        troubleshooting and maintenance.
+                    </p>
+
                 </div>
 
-                <h3>
-                    Windows
-                </h3>
 
-                <p>
-                    Windows installation, activation, driver setup,
-                    configuration and troubleshooting.
-                </p>
+                <div class="skill-card">
 
-            </div>
+                    <div class="skill-icon">
+                        <i class="fab fa-windows"></i>
+                    </div>
 
+                    <h3>Windows Support</h3>
 
+                    <p>
+                        Windows installation, configuration,
+                        activation, updates and troubleshooting.
+                    </p>
 
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    04
                 </div>
 
-                <h3>
-                    Networking
-                </h3>
 
-                <p>
-                    LAN, IP configuration, connectivity troubleshooting
-                    and basic network support.
-                </p>
+                <div class="skill-card">
 
-            </div>
+                    <div class="skill-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
 
+                    <h3>Networking</h3>
 
+                    <p>
+                        LAN, IP configuration, connectivity and basic
+                        network troubleshooting.
+                    </p>
 
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    05
                 </div>
 
-                <h3>
-                    Printer Support
-                </h3>
 
-                <p>
-                    Printer installation, IP printer configuration,
-                    sharing and troubleshooting.
-                </p>
+                <div class="skill-card">
 
-            </div>
+                    <div class="skill-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
 
+                    <h3>Printer Support</h3>
 
+                    <p>
+                        Printer installation, IP printer configuration,
+                        driver setup and troubleshooting.
+                    </p>
 
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    06
                 </div>
 
-                <h3>
-                    Microsoft 365
-                </h3>
 
-                <p>
-                    Microsoft 365 installation, setup and
-                    application support.
-                </p>
+                <div class="skill-card">
 
-            </div>
+                    <div class="skill-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
 
+                    <h3>Microsoft 365</h3>
 
+                    <p>
+                        Microsoft 365 installation, configuration and
+                        user support.
+                    </p>
 
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    07
                 </div>
 
-                <h3>
-                    Computer Setup
-                </h3>
 
-                <p>
-                    Laptop and desktop setup, software installation
-                    and system configuration.
-                </p>
+                <div class="skill-card">
 
-            </div>
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
 
+                    <h3>IT Troubleshooting</h3>
 
+                    <p>
+                        Diagnose and resolve day-to-day hardware,
+                        software and system issues.
+                    </p>
 
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    08
                 </div>
 
-                <h3>
-                    IT Asset Management
-                </h3>
 
-                <p>
-                    Hardware inventory, documentation, tracking
-                    and equipment management.
-                </p>
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+
+                    <h3>Device Setup</h3>
+
+                    <p>
+                        New laptop and desktop setup, software
+                        installation and configuration.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="fas fa-boxes-stacked"></i>
+                    </div>
+
+                    <h3>IT Asset Management</h3>
+
+                    <p>
+                        Hardware inventory, documentation and IT asset
+                        management.
+                    </p>
+
+                </div>
 
             </div>
-
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
+    <!-- =========================
+         EXPERIENCE
+    ========================= -->
 
-<!-- ================= EXPERIENCE ================= -->
+    <section id="experience" class="section">
 
-<section id="experience"
-         class="section">
+        <div class="container">
 
-    <div class="container">
+            <div class="section-title">
 
+                <span>Career</span>
 
-        <div class="section-heading center">
+                <h2>Work Experience</h2>
 
-            <p class="section-label">
-                CAREER
-            </p>
+                <div class="line"></div>
 
-            <h2>
-                Work Experience
-            </h2>
-
-            <p>
-                Professional IT experience
-            </p>
-
-        </div>
+            </div>
 
 
-        <div class="timeline">
+            <div class="experience-grid">
 
 
-            <!-- BIGD -->
+                <!-- CURRENT JOB -->
 
-            <article class="experience-card">
+                <div class="experience-card">
 
+                    <div class="experience-header">
 
-                <div class="experience-top">
+                        <div>
 
-                    <div>
+                            <h3>IT Officer</h3>
 
-                        <h3>
-                            IT Officer
-                        </h3>
+                            <h4>
+                                BRAC Institute of Governance and Development
+                                (BIGD), BRAC University
+                            </h4>
 
-                        <h4>
-                            BRAC Institute of Governance and Development (BIGD),
-                            BRAC University
-                        </h4>
+                        </div>
+
+                        <span class="experience-date">
+                            Jan 2025 - Present
+                        </span>
 
                     </div>
 
 
-                    <span class="date">
-                        Jan 2025 – Present
-                    </span>
+                    <ul>
+
+                        <li>
+                            Provide day-to-day IT support to faculty,
+                            staff and students.
+                        </li>
+
+                        <li>
+                            Install, configure and troubleshoot desktop
+                            and laptop computers.
+                        </li>
+
+                        <li>
+                            Install and configure printers including
+                            network/IP printers.
+                        </li>
+
+                        <li>
+                            Perform Windows installation, activation,
+                            configuration and troubleshooting.
+                        </li>
+
+                        <li>
+                            Install and support Microsoft 365 applications.
+                        </li>
+
+                        <li>
+                            Troubleshoot LAN, IP and network connectivity
+                            related issues.
+                        </li>
+
+                        <li>
+                            Maintain IT equipment and asset inventory.
+                        </li>
+
+                        <li>
+                            Provide technical support for daily office
+                            operations.
+                        </li>
+
+                    </ul>
 
                 </div>
 
 
-                <ul>
+                <!-- PREVIOUS JOB -->
 
-                    <li>
-                        Provide IT support and technical troubleshooting
-                        for users.
-                    </li>
+                <div class="experience-card">
 
-                    <li>
-                        Maintain computer lab systems, computers
-                        and IT equipment.
-                    </li>
+                    <div class="experience-header">
 
-                    <li>
-                        Install and configure Windows operating systems,
-                        drivers and software.
-                    </li>
+                        <div>
 
-                    <li>
-                        Install and configure printers and IP-based
-                        network printers.
-                    </li>
+                            <h3>IT & ERP Officer</h3>
 
-                    <li>
-                        Perform hardware and software troubleshooting.
-                    </li>
+                            <h4>
+                                Noman Home Textile Mills Ltd.
+                                <br>
+                                SAAD Group of Industries
+                            </h4>
 
-                    <li>
-                        Install and configure Microsoft 365 applications.
-                    </li>
+                        </div>
 
-                    <li>
-                        Support laptop and desktop setup and configuration.
-                    </li>
-
-                    <li>
-                        Maintain IT asset inventory and related documentation.
-                    </li>
-
-                    <li>
-                        Provide technical assistance to students,
-                        faculty and staff.
-                    </li>
-
-                </ul>
-
-            </article>
-
-
-
-            <!-- PREVIOUS JOB -->
-
-            <article class="experience-card">
-
-
-                <div class="experience-top">
-
-                    <div>
-
-                        <h3>
-                            IT & ERP Officer
-                        </h3>
-
-                        <h4>
-                            Noman Home Textile Mills Ltd,
-                            SAAD Group of Industries
-                        </h4>
+                        <span class="experience-date">
+                            Jan 2021 - May 2024
+                        </span>
 
                     </div>
 
 
-                    <span class="date">
-                        Jan 2021 – May 2024
-                    </span>
+                    <ul>
+
+                        <li>
+                            Provided IT support for hardware and software
+                            related issues.
+                        </li>
+
+                        <li>
+                            Troubleshot desktop, laptop and printer
+                            problems.
+                        </li>
+
+                        <li>
+                            Supported ERP and MIS related activities.
+                        </li>
+
+                        <li>
+                            Performed Windows installation and system
+                            configuration.
+                        </li>
+
+                        <li>
+                            Supported LAN and network troubleshooting.
+                        </li>
+
+                        <li>
+                            Maintained CCTV and other IT equipment.
+                        </li>
+
+                        <li>
+                            Managed IT hardware and software inventory.
+                        </li>
+
+                        <li>
+                            Provided technical assistance to users for
+                            day-to-day IT operations.
+                        </li>
+
+                    </ul>
 
                 </div>
 
-
-                <ul>
-
-                    <li>
-                        Installed and configured computer hardware,
-                        operating systems and applications.
-                    </li>
-
-                    <li>
-                        Monitored and maintained computer systems
-                        and network infrastructure.
-                    </li>
-
-                    <li>
-                        Troubleshot system, hardware, software and
-                        network-related problems.
-                    </li>
-
-                    <li>
-                        Provided PC troubleshooting, Outlook/mail
-                        configuration and technical support.
-                    </li>
-
-                    <li>
-                        Installed, configured and troubleshot local
-                        and network printers.
-                    </li>
-
-                    <li>
-                        Configured printer sharing and network connectivity.
-                    </li>
-
-                    <li>
-                        Identified suitable hardware and software
-                        solutions based on user requirements.
-                    </li>
-
-                    <li>
-                        Supported printer-related technical issues
-                        and solutions.
-                    </li>
-
-                    <li>
-                        Worked with IBM software and supported
-                        related IT operations.
-                    </li>
-
-                </ul>
-
-            </article>
-
+            </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
+    <!-- =========================
+         EDUCATION
+    ========================= -->
 
-<!-- ================= EDUCATION ================= -->
+    <section id="education" class="section light-section">
 
-<section id="education"
-         class="section section-light">
+        <div class="container">
 
-    <div class="container">
+            <div class="section-title">
 
+                <span>Education</span>
 
-        <div class="section-heading center">
+                <h2>Academic Background</h2>
 
-            <p class="section-label">
-                ACADEMIC
-            </p>
-
-            <h2>
-                Education
-            </h2>
-
-            <p>
-                Academic background
-            </p>
-
-        </div>
-
-
-        <div class="education-grid">
-
-
-            <div class="education-card">
-
-                <span class="education-tag">
-                    BSc
-                </span>
-
-                <h3>
-                    BSc in Computer Science & Engineering
-                </h3>
-
-                <p>
-                    Daffodil International University
-                </p>
-
-                <strong>
-                    CGPA: 3.00
-                </strong>
+                <div class="line"></div>
 
             </div>
 
 
-
-            <div class="education-card">
-
-                <span class="education-tag">
-                    Diploma
-                </span>
-
-                <h3>
-                    Diploma in Computer Engineering
-                </h3>
-
-                <p>
-                    Patuakhali Polytechnic Institute
-                </p>
-
-                <strong>
-                    CGPA: 3.06
-                </strong>
-
-            </div>
+            <div class="education-grid">
 
 
+                <div class="education-card">
 
-            <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
 
-                <span class="education-tag">
-                    SSC
-                </span>
+                    <h3>
+                        Bachelor of Science in Computer Science & Engineering
+                    </h3>
 
-                <h3>
-                    Secondary School Certificate
-                </h3>
-
-                <p>
-                    Business Studies
-                </p>
-
-                <strong>
-                    CGPA: 4.56
-                </strong>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= PROJECTS ================= -->
-
-<section id="projects"
-         class="section">
-
-    <div class="container">
-
-
-        <div class="section-heading center">
-
-            <p class="section-label">
-                PRACTICAL WORK
-            </p>
-
-            <h2>
-                IT Projects & Work
-            </h2>
-
-            <p>
-                Selected areas of hands-on technical work
-            </p>
-
-        </div>
-
-
-        <div class="projects-grid">
-
-
-            <article class="project-card">
-
-                <span class="project-number">
-                    01
-                </span>
-
-                <h3>
-                    IP Printer Configuration
-                </h3>
-
-                <p>
-
-                    Installation and configuration of network
-                    printers using IP addresses, including connectivity
-                    and printing issue troubleshooting.
-
-                </p>
-
-                <div class="tags">
+                    <p>
+                        Daffodil International University
+                    </p>
 
                     <span>
-                        Printer
+                        CGPA: 3.00
                     </span>
-
-                    <span>
-                        IP Configuration
-                    </span>
-
-                    <span>
-                        Networking
-                    </span>
-
-                </div>
-
-            </article>
-
-
-
-            <article class="project-card">
-
-                <span class="project-number">
-                    02
-                </span>
-
-                <h3>
-                    Windows System Setup
-                </h3>
-
-                <p>
-
-                    Windows installation, activation, driver setup,
-                    software installation and system configuration.
-
-                </p>
-
-                <div class="tags">
-
-                    <span>
-                        Windows
-                    </span>
-
-                    <span>
-                        Drivers
-                    </span>
-
-                    <span>
-                        Software
-                    </span>
-
-                </div>
-
-            </article>
-
-
-
-            <article class="project-card">
-
-                <span class="project-number">
-                    03
-                </span>
-
-                <h3>
-                    Computer Lab Support
-                </h3>
-
-                <p>
-
-                    Maintenance and troubleshooting of computer lab
-                    systems, computers and related IT equipment.
-
-                </p>
-
-                <div class="tags">
-
-                    <span>
-                        Hardware
-                    </span>
-
-                    <span>
-                        Support
-                    </span>
-
-                    <span>
-                        Maintenance
-                    </span>
-
-                </div>
-
-            </article>
-
-
-
-            <article class="project-card">
-
-                <span class="project-number">
-                    04
-                </span>
-
-                <h3>
-                    IT Asset Management
-                </h3>
-
-                <p>
-
-                    Hardware inventory management, asset documentation,
-                    equipment tracking and IT resource organization.
-
-                </p>
-
-                <div class="tags">
-
-                    <span>
-                        Inventory
-                    </span>
-
-                    <span>
-                        Documentation
-                    </span>
-
-                    <span>
-                        IT Assets
-                    </span>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contact"
-         class="contact section">
-
-    <div class="container">
-
-
-        <div class="section-heading center">
-
-            <p class="section-label">
-                GET IN TOUCH
-            </p>
-
-            <h2>
-                Contact Me
-            </h2>
-
-            <p>
-                Feel free to connect with me for professional opportunities.
-            </p>
-
-        </div>
-
-
-        <div class="contact-grid">
-
-
-            <!-- EMAIL -->
-
-            <a class="contact-card"
-               href="mailto:jibon.chandra@bracu.ac.bd">
-
-                <span class="contact-icon">
-                    @
-                </span>
-
-                <span>
 
                     <small>
-                        Email
+                        2019
                     </small>
 
-                    <strong>
+                </div>
+
+
+                <div class="education-card">
+
+                    <div class="education-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+
+                    <h3>
+                        Diploma in Computer Engineering
+                    </h3>
+
+                    <p>
+                        Patuakhali Polytechnic Institute
+                    </p>
+
+                    <span>
+                        CGPA: 3.06
+                    </span>
+
+                    <small>
+                        2015
+                    </small>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+
+                    <h3>
+                        Secondary School Certificate
+                    </h3>
+
+                    <p>
+                        Business Studies
+                    </p>
+
+                    <span>
+                        GPA: 4.56
+                    </span>
+
+                    <small>
+                        2011
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
+
+    <section id="projects" class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Projects</span>
+
+                <h2>My Work</h2>
+
+                <div class="line"></div>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <div class="project-card">
+
+                    <div class="project-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+
+                    <h3>IT Support & Troubleshooting</h3>
+
+                    <p>
+                        Day-to-day technical support including hardware,
+                        software, Windows, printer and network
+                        troubleshooting.
+                    </p>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <div class="project-icon">
+                        <i class="fas fa-boxes-stacked"></i>
+                    </div>
+
+                    <h3>IT Asset Management</h3>
+
+                    <p>
+                        Maintaining hardware inventory and documentation
+                        for laptops, desktops, printers and other IT
+                        equipment.
+                    </p>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <div class="project-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+
+                    <h3>Network & Device Setup</h3>
+
+                    <p>
+                        Device configuration, IP setup, LAN connectivity
+                        and network troubleshooting.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact" class="section contact-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Contact</span>
+
+                <h2>Get In Touch</h2>
+
+                <div class="line"></div>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+
+                    <h3>Email</h3>
+
+                    <a href="mailto:jibon.chandra@bracu.ac.bd">
                         jibon.chandra@bracu.ac.bd
-                    </strong>
+                    </a>
 
-                </span>
-
-            </a>
+                </div>
 
 
+                <div class="contact-card">
 
-            <!-- PHONE -->
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
 
-            <a class="contact-card"
-               href="tel:+8801912913139">
+                    <h3>Phone</h3>
 
-                <span class="contact-icon">
-                    ☎
-                </span>
-
-                <span>
-
-                    <small>
-                        Phone
-                    </small>
-
-                    <strong>
+                    <a href="tel:+8801912913139">
                         +880 1912-913139
-                    </strong>
+                    </a>
 
-                </span>
-
-            </a>
+                </div>
 
 
+                <div class="contact-card">
 
-            <!-- GITHUB -->
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
 
-            <a class="contact-card"
-               href="https://github.com/jibonmali"
-               target="_blank"
-               rel="noopener noreferrer">
+                    <h3>GitHub</h3>
 
-                <span class="contact-icon">
-                    GH
-                </span>
-
-                <span>
-
-                    <small>
-                        GitHub
-                    </small>
-
-                    <strong>
+                    <a href="https://github.com/jibonmali"
+                       target="_blank">
                         github.com/jibonmali
-                    </strong>
+                    </a>
 
-                </span>
-
-            </a>
+                </div>
 
 
+                <div class="contact-card">
 
-            <!-- LINKEDIN -->
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
 
-            <a class="contact-card"
-               href="YOUR_LINKEDIN_URL"
-               target="_blank"
-               rel="noopener noreferrer">
+                    <h3>LinkedIn</h3>
 
-                <span class="contact-icon">
-                    in
-                </span>
-
-                <span>
-
-                    <small>
-                        LinkedIn
-                    </small>
-
-                    <strong>
+                    <a href="YOUR_LINKEDIN_URL"
+                       target="_blank">
                         LinkedIn Profile
-                    </strong>
+                    </a>
 
-                </span>
+                </div>
 
-            </a>
-
+            </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-</main>
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
+    <footer>
 
+        <div class="container">
 
-<!-- ================= FOOTER ================= -->
+            <p>
+                © 2026 Jibon Chandra Mali. All Rights Reserved.
+            </p>
 
-<footer>
+            <p>
+                IT Officer | IT Support & Technical Troubleshooting
+            </p>
 
-    <div class="container footer-content">
+        </div>
 
-        <p>
-            © 2026 Jibon Chandra Mali. All Rights Reserved.
-        </p>
-
-        <p>
-            IT Officer | IT Support & Technical Troubleshooting
-        </p>
-
-    </div>
-
-</footer>
+    </footer>
 
 
 </body>
+
 </html>
-/* =========================================
-   JIBON CHANDRA MALI - PORTFOLIO WEBSITE
-   ========================================= */
-
-
-:root {
-
-    --navy: #0f172a;
-
-    --blue: #2563eb;
-
-    --sky: #38bdf8;
-
-    --light-blue: #eff6ff;
-
-    --white: #ffffff;
-
-    --bg: #f8fafc;
-
-    --text: #1e293b;
-
-    --muted: #64748b;
-
-    --border: #e2e8f0;
-
-    --shadow:
-        0 10px 30px rgba(15, 23, 42, 0.08);
-
-}
-
-
-
-/* =========================================
-   BASIC
-   ========================================= */
-
-* {
-
-    margin: 0;
-
-    padding: 0;
-
-    box-sizing: border-box;
-
-    scroll-behavior: smooth;
-
-}
-
-
-body {
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    background: var(--bg);
-
-    color: var(--text);
-
-    line-height: 1.7;
-
-}
-
-
-a {
-
-    color: inherit;
-
-}
-
-
-.container {
-
-    width: min(1120px, 90%);
-
-    margin: auto;
-
-}
-
-
-
-/* =========================================
-   HEADER
-   ========================================= */
-
-.header {
-
-    position: sticky;
-
-    top: 0;
-
-    z-index: 1000;
-
-    background:
-        rgba(15, 23, 42, 0.96);
-
-    backdrop-filter: blur(10px);
-
-    box-shadow:
-        0 2px 15px rgba(0, 0, 0, 0.12);
-
-}
-
-
-.navbar {
-
-    min-height: 72px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 25px;
-
-}
-
-
-.logo {
-
-    color: var(--white);
-
-    text-decoration: none;
-
-    font-size: 24px;
-
-    font-weight: 800;
-
-}
-
-
-.logo span {
-
-    color: var(--sky);
-
-}
-
-
-.nav-links {
-
-    list-style: none;
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    justify-content: center;
-
-    gap: 24px;
-
-}
-
-
-.nav-links a {
-
-    color: #e2e8f0;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-    transition: 0.3s;
-
-}
-
-
-.nav-links a:hover {
-
-    color: var(--sky);
-
-}
-
-
-
-/* =========================================
-   HERO
-   ========================================= */
-
-.hero {
-
-    min-height: 92vh;
-
-    display: flex;
-
-    align-items: center;
-
-    text-align: center;
-
-    color: var(--white);
-
-    background:
-
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(56, 189, 248, 0.18),
-            transparent 28%
-        ),
-
-        radial-gradient(
-            circle at 85% 80%,
-            rgba(37, 99, 235, 0.25),
-            transparent 30%
-        ),
-
-        linear-gradient(
-            135deg,
-            #020617,
-            #172554 55%,
-            #0f172a
-        );
-
-    padding: 90px 0;
-
-}
-
-
-.hero-content {
-
-    max-width: 900px;
-
-}
-
-
-.hero-photo {
-
-    margin-bottom: 25px;
-
-}
-
-
-.hero-photo img {
-
-    width: 165px;
-
-    height: 165px;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    border: 5px solid var(--sky);
-
-    box-shadow:
-        0 0 0 8px rgba(56, 189, 248, 0.08);
-
-}
-
-
-.eyebrow {
-
-    color: var(--sky);
-
-    font-size: 13px;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
-
-}
-
-
-.hero h1 {
-
-    font-size:
-        clamp(38px, 6vw, 64px);
-
-    line-height: 1.15;
-
-    margin: 8px 0 15px;
-
-}
-
-
-.hero h2 {
-
-    color: var(--sky);
-
-    font-size:
-        clamp(20px, 3vw, 28px);
-
-    margin-bottom: 22px;
-
-}
-
-
-.hero h2 span {
-
-    color: #94a3b8;
-
-    margin: 0 5px;
-
-}
-
-
-.hero-text {
-
-    max-width: 760px;
-
-    margin: auto;
-
-    color: #cbd5e1;
-
-    font-size: 17px;
-
-}
-
-
-.hero-buttons {
-
-    margin: 30px 0 18px;
-
-}
-
-
-.btn {
-
-    display: inline-block;
-
-    padding: 12px 25px;
-
-    margin: 5px;
-
-    border-radius: 7px;
-
-    text-decoration: none;
-
-    font-weight: 700;
-
-    transition: 0.3s;
-
-}
-
-
-.btn-primary {
-
-    background: var(--sky);
-
-    color: var(--navy);
-
-}
-
-
-.btn-primary:hover {
-
-    transform: translateY(-2px);
-
-    background: var(--white);
-
-}
-
-
-.btn-outline {
-
-    border: 1px solid #64748b;
-
-    color: var(--white);
-
-}
-
-
-.btn-outline:hover {
-
-    border-color: var(--sky);
-
-    color: var(--sky);
-
-}
-
-
-.social-links {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 25px;
-
-}
-
-
-.social-links a {
-
-    color: #cbd5e1;
-
-    text-decoration: none;
-
-    font-weight: 600;
-
-}
-
-
-.social-links a:hover {
-
-    color: var(--sky);
-
-}
-
-
-
-/* =========================================
-   SECTIONS
-   ========================================= */
-
-.section {
-
-    padding: 90px 0;
-
-}
-
-
-.section-light {
-
-    background: #f1f5f9;
-
-}
-
-
-.section-heading {
-
-    margin-bottom: 45px;
-
-}
-
-
-.section-heading.center {
-
-    text-align: center;
-
-}
-
-
-.section-heading h2 {
-
-    font-size: 36px;
-
-    color: var(--navy);
-
-    line-height: 1.2;
-
-    margin: 5px 0 10px;
-
-}
-
-
-.section-label {
-
-    color: var(--blue);
-
-    font-size: 13px;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
-
-}
-
-
-.section-heading p:last-child {
-
-    color: var(--muted);
-
-}
-
-
-
-/* =========================================
-   ABOUT
-   ========================================= */
-
-.about-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        1.5fr 1fr;
-
-    gap: 50px;
-
-    align-items: center;
-
-}
-
-
-.about-text {
-
-    font-size: 17px;
-
-    color: #475569;
-
-}
-
-
-.about-text p {
-
-    margin-bottom: 20px;
-
-}
-
-
-.about-card {
-
-    background: var(--white);
-
-    border: 1px solid var(--border);
-
-    border-radius: 14px;
-
-    padding: 28px;
-
-    box-shadow: var(--shadow);
-
-}
-
-
-.info-row {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-    padding: 15px 0;
-
-    border-bottom:
-        1px solid var(--border);
-
-}
-
-
-.info-row:last-child {
-
-    border-bottom: 0;
-
-}
-
-
-.info-row span {
-
-    color: var(--muted);
-
-}
-
-
-.info-row strong {
-
-    text-align: right;
-
-}
-
-
-
-/* =========================================
-   SKILLS
-   ========================================= */
-
-.skills-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 22px;
-
-}
-
-
-.skill-card {
-
-    background: var(--white);
-
-    border: 1px solid var(--border);
-
-    border-radius: 12px;
-
-    padding: 28px 22px;
-
-    box-shadow: var(--shadow);
-
-    transition: 0.3s;
-
-}
-
-
-.skill-card:hover {
-
-    transform:
-        translateY(-5px);
-
-}
-
-
-.skill-icon {
-
-    width: 42px;
-
-    height: 42px;
-
-    display: grid;
-
-    place-items: center;
-
-    background: var(--light-blue);
-
-    color: var(--blue);
-
-    border-radius: 8px;
-
-    font-weight: 800;
-
-    margin-bottom: 18px;
-
-}
-
-
-.skill-card h3 {
-
-    color: var(--navy);
-
-    margin-bottom: 8px;
-
-}
-
-
-.skill-card p {
-
-    color: var(--muted);
-
-    font-size: 14px;
-
-}
-
-
-
-/* =========================================
-   EXPERIENCE
-   ========================================= */
-
-.timeline {
-
-    display: grid;
-
-    gap: 25px;
-
-}
-
-
-.experience-card {
-
-    background: var(--white);
-
-    border-left:
-        5px solid var(--blue);
-
-    border-radius: 10px;
-
-    padding: 30px;
-
-    box-shadow: var(--shadow);
-
-}
-
-
-.experience-top {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 25px;
-
-    align-items: flex-start;
-
-    margin-bottom: 20px;
-
-}
-
-
-.experience-card h3 {
-
-    color: var(--navy);
-
-    font-size: 23px;
-
-}
-
-
-.experience-card h4 {
-
-    color: var(--blue);
-
-    font-size: 15px;
-
-    margin-top: 5px;
-
-    font-weight: 700;
-
-}
-
-
-.date {
-
-    white-space: nowrap;
-
-    color: var(--muted);
-
-    background: var(--light-blue);
-
-    padding: 6px 12px;
-
-    border-radius: 20px;
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-}
-
-
-.experience-card ul {
-
-    padding-left: 20px;
-
-    color: #475569;
-
-}
-
-
-.experience-card li {
-
-    margin-bottom: 7px;
-
-}
-
-
-
-/* =========================================
-   EDUCATION
-   ========================================= */
-
-.education-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 24px;
-
-}
-
-
-.education-card {
-
-    background: var(--white);
-
-    padding: 30px;
-
-    border: 1px solid var(--border);
-
-    border-radius: 12px;
-
-    box-shadow: var(--shadow);
-
-    transition: 0.3s;
-
-}
-
-
-.education-card:hover {
-
-    transform:
-        translateY(-5px);
-
-}
-
-
-.education-tag {
-
-    display: inline-block;
-
-    background: var(--navy);
-
-    color: var(--sky);
-
-    padding: 4px 10px;
-
-    border-radius: 5px;
-
-    font-size: 12px;
-
-    font-weight: 800;
-
-    margin-bottom: 15px;
-
-}
-
-
-.education-card h3 {
-
-    color: var(--navy);
-
-    margin-bottom: 10px;
-
-}
-
-
-.education-card p {
-
-    color: var(--muted);
-
-    margin-bottom: 8px;
-
-}
-
-
-.education-card strong {
-
-    color: var(--blue);
-
-}
-
-
-
-/* =========================================
-   PROJECTS
-   ========================================= */
-
-.projects-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 24px;
-
-}
-
-
-.project-card {
-
-    background: var(--white);
-
-    border: 1px solid var(--border);
-
-    border-radius: 12px;
-
-    padding: 30px;
-
-    box-shadow: var(--shadow);
-
-    transition: 0.3s;
-
-}
-
-
-.project-card:hover {
-
-    transform:
-        translateY(-5px);
-
-}
-
-
-.project-number {
-
-    color: var(--blue);
-
-    font-size: 13px;
-
-    font-weight: 800;
-
-}
-
-
-.project-card h3 {
-
-    color: var(--navy);
-
-    font-size: 22px;
-
-    margin: 8px 0 12px;
-
-}
-
-
-.project-card p {
-
-    color: var(--muted);
-
-}
-
-
-.tags {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-
-    margin-top: 20px;
-
-}
-
-
-.tags span {
-
-    background: var(--light-blue);
-
-    color: var(--blue);
-
-    padding: 5px 10px;
-
-    border-radius: 5px;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-}
-
-
-
-/* =========================================
-   CONTACT
-   ========================================= */
-
-.contact {
-
-    background: var(--navy);
-
-    color: var(--white);
-
-}
-
-
-.contact .section-heading h2 {
-
-    color: var(--white);
-
-}
-
-
-.contact .section-heading p:last-child {
-
-    color: #94a3b8;
-
-}
-
-
-.contact-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 16px;
-
-}
-
-
-.contact-card {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 13px;
-
-    background: #172033;
-
-    border: 1px solid #26334d;
-
-    padding: 18px;
-
-    border-radius: 10px;
-
-    text-decoration: none;
-
-    transition: 0.3s;
-
-}
-
-
-.contact-card:hover {
-
-    border-color: var(--sky);
-
-    transform:
-        translateY(-3px);
-
-}
-
-
-.contact-card small {
-
-    display: block;
-
-    color: #94a3b8;
-
-    margin-bottom: 2px;
-
-}
-
-
-.contact-card strong {
-
-    display: block;
-
-    color: var(--white);
-
-    font-size: 13px;
-
-    word-break: break-word;
-
-}
-
-
-.contact-icon {
-
-    width: 38px;
-
-    height: 38px;
-
-    flex-shrink: 0;
-
-    display: grid;
-
-    place-items: center;
-
-    background:
-        rgba(56, 189, 248, 0.12);
-
-    color: var(--sky);
-
-    border-radius: 7px;
-
-    font-weight: 800;
-
-}
-
-
-
-/* =========================================
-   FOOTER
-   ========================================= */
-
-footer {
-
-    background: #020617;
-
-    color: #94a3b8;
-
-    padding: 20px 0;
-
-}
-
-
-.footer-content {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-    font-size: 13px;
-
-}
-
-
-
-/* =========================================
-   RESPONSIVE
-   ========================================= */
-
-@media (max-width: 950px) {
-
-    .skills-grid {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-    }
-
-
-    .contact-grid {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-    }
-
-}
-
-
-@media (max-width: 800px) {
-
-    .navbar {
-
-        flex-direction: column;
-
-        padding: 16px 0;
-
-    }
-
-
-    .nav-links {
-
-        gap: 13px;
-
-    }
-
-
-    .about-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .education-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .experience-top {
-
-        flex-direction: column;
-
-        gap: 12px;
-
-    }
-
-
-    .date {
-
-        white-space: normal;
-
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .hero {
-
-        padding: 70px 0;
-
-    }
-
-
-    .hero-photo img {
-
-        width: 135px;
-
-        height: 135px;
-
-    }
-
-
-    .section {
-
-        padding: 65px 0;
-
-    }
-
-
-    .skills-grid,
-    .projects-grid,
-    .contact-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .section-heading h2 {
-
-        font-size: 30px;
-
-    }
-
-
-    .footer-content {
-
-        flex-direction: column;
-
-        text-align: center;
-
-    }
-
-}
