@@ -4,660 +4,1079 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description"
+        content="Jibon Chandra Mali - IT Officer | IT Support & Technical Troubleshooting">
+
     <title>Jibon Chandra Mali | IT Officer</title>
 
-    <style>
-        .profile-photo {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #38bdf8;
-    margin-bottom: 25px;
-}
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fb;
-            color: #222;
-            line-height: 1.6;
-        }
-
-        header {
-            background: #0f172a;
-            color: white;
-            padding: 20px 8%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-        nav ul li a:hover {
-            color: #38bdf8;
-        }
-
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #0f172a, #1e3a8a);
-            color: white;
-        }
-
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .hero h1 {
-            font-size: 52px;
-            margin-bottom: 15px;
-        }
-
-        .hero h2 {
-            font-size: 25px;
-            color: #38bdf8;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: #e2e8f0;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background: #38bdf8;
-            color: #0f172a;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            margin: 5px;
-        }
-
-        .btn:hover {
-            background: white;
-        }
-
-        section {
-            padding: 80px 8%;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title h2 {
-            font-size: 34px;
-            color: #0f172a;
-        }
-
-        .section-title p {
-            color: #64748b;
-            margin-top: 8px;
-        }
-
-        .about {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-            font-size: 17px;
-        }
-
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
-
-        .skill-card h3 {
-            color: #1e3a8a;
-            margin-bottom: 10px;
-        }
-
-.experience {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-.experience-card {
-    background: white;
-    padding: 30px;
-    border-left: 5px solid #1e3a8a;
-    border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-}
-
-.experience-card h3 {
-    color: #1e3a8a;
-    margin-top: 0;
-}
-
-.experience-card .date {
-    color: #64748b;
-    margin: 5px 0 15px;
-}
-
-
-
-
-
-/* Mobile view */
-@media (max-width: 768px) {
-
-    .experience {
-        grid-template-columns: 1fr;
-        padding: 0 15px;
-    }
-
-}
-        }
-
-        .education-container,
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
-
-        .card h3 {
-            color: #1e3a8a;
-            margin-bottom: 10px;
-        }
-
-        .contact {
-            background: #0f172a;
-            color: white;
-            text-align: center;
-        }
-
-        .contact .section-title h2 {
-            color: white;
-        }
-
-        .contact-info {
-            margin-top: 20px;
-            font-size: 17px;
-        }
-
-        .contact-info a {
-            color: #38bdf8;
-            text-decoration: none;
-        }
-
-        footer {
-            background: #020617;
-            color: #94a3b8;
-            text-align: center;
-            padding: 20px;
-        }
-
-        @media (max-width: 768px) {
-
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            .hero h2 {
-                font-size: 21px;
-            }
-
-            section {
-                padding: 60px 5%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <div class="logo">Jibon Chandra Mali</div>
+<!-- ================= HEADER ================= -->
 
-        <ul>
+<header class="header">
+
+    <nav class="navbar container">
+
+        <a href="#home" class="logo">
+            Jibon<span>.</span>
+        </a>
+
+        <ul class="nav-links">
+
             <li><a href="#home">Home</a></li>
+
             <li><a href="#about">About</a></li>
+
             <li><a href="#skills">Skills</a></li>
+
             <li><a href="#experience">Experience</a></li>
+
             <li><a href="#education">Education</a></li>
+
             <li><a href="#projects">Projects</a></li>
+
             <li><a href="#contact">Contact</a></li>
+
         </ul>
+
     </nav>
+
 </header>
 
 
-<!-- HOME -->
+<main>
+
+
+<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
-    <div class="hero-content">
+    <div class="hero-content container">
 
-        <img src="profile.jpg" alt="Jibon Chandra Mali" class="profile-photo"><h1>Jibon Chandra Mali</h1>
+        <div class="hero-photo">
 
-        <h2>IT Officer | IT Support & Technical Troubleshooting</h2>
+            <img src="profile.jpg"
+                 alt="Jibon Chandra Mali">
 
-        <p>
-            IT professional specializing in hardware and software troubleshooting,
-            Windows installation, networking, printer configuration,
-            Microsoft 365 and technical support.
+        </div>
+
+
+        <p class="eyebrow">
+            IT PROFESSIONAL
         </p>
 
-        <a href="#contact" class="btn">Contact Me</a>
 
-        <a href="#experience" class="btn">View Experience</a>
-
-    </div>
-
-</section>
+        <h1>
+            Jibon Chandra Mali
+        </h1>
 
 
-<!-- ABOUT -->
+        <h2>
+            IT Officer
+            <span>|</span>
+            IT Support & Technical Troubleshooting
+        </h2>
 
-<section id="about">
 
-    <div class="section-title">
-        <h2>About Me</h2>
-        <p>Professional Profile</p>
-    </div>
+        <p class="hero-text">
 
-    <div class="about">
+            IT professional with hands-on experience in hardware and
+            software troubleshooting, Windows installation and configuration,
+            networking, printer configuration, Microsoft 365 and
+            end-user technical support.
 
-        <p>
-            I am an IT professional with hands-on experience in IT support,
-            hardware and software troubleshooting, computer systems,
-            networking and technical operations.
         </p>
 
-        <br>
 
-        <p>
-            My areas of expertise include Windows installation and configuration,
-            printer installation and IP configuration, Microsoft 365 installation,
-            laptop and desktop setup, LAN troubleshooting and IT asset management.
-        </p>
+        <div class="hero-buttons">
 
-    </div>
-
-</section>
-
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-    <div class="section-title">
-        <h2>Technical Skills</h2>
-        <p>My core IT capabilities</p>
-    </div>
-
-    <div class="skills-container">
-
-        <div class="skill-card">
-            <h3>IT Support</h3>
-            <p>Hardware and software troubleshooting and end-user technical support.</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>Windows</h3>
-            <p>Windows installation, configuration, activation and troubleshooting.</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>Networking</h3>
-            <p>LAN setup, IP configuration and basic network troubleshooting.</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>Printer Support</h3>
-            <p>Printer installation, IP printer configuration and troubleshooting.</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>Microsoft 365</h3>
-            <p>Microsoft 365 installation, setup and user support.</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>Computer Setup</h3>
-            <p>Laptop and desktop setup, software installation and configuration.</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>IT Asset Management</h3>
-            <p>Hardware inventory, documentation and IT asset tracking.</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>User Support</h3>
-            <p>Technical assistance for staff, faculty and students.</p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- EXPERIENCE -->
-
-<section id="experience">
-
-    <div class="section-title">
-        <h2>Work Experience</h2>
-        <p>Professional Experience</p>
-    </div>
-
-    <div class="experience">
-
-        <div class="experience-card">
-
-            <h3>IT Officer</h3>
-
-            <div class="date">
-                BRAC Institute of Governance and Development (BIGD)
-            </div>
-
-            <div class="date">
-                January 2025 - Present
-            </div>
-
-            <ul>
-
-                <li>Provide IT support and technical troubleshooting.</li>
-
-                <li>Maintain computer lab systems and IT equipment.</li>
-
-                <li>Install and configure Windows operating systems.</li>
-
-                <li>Install and configure printers and IP printers.</li>
-
-                <li>Provide hardware and software troubleshooting.</li>
-
-                <li>Install and configure Microsoft 365 applications.</li>
-
-                <li>Support laptop and desktop setup.</li>
-
-                <li>Maintain IT asset inventory and documentation.</li>
-
-                <li>Provide technical support to students, faculty and staff.</li>
-
-            </ul>
-
-        </div>
-
-    </div>
-    
-    <div class="experience-card">
-
-    <h3>IT & ERP Officer</h3>
-
-    <div class="date">
-        NOMAN HOME TEXTILE MILLS LTD, SAAD GROUP OF INDUSTRIES
-    </div>
-
-    <div class="date">
-        January 2021 - May 2024
-    </div>
-
-    <ul>
-
-        <li>Installed and configured computer hardware, operating systems and applications.</li>
-
-        <li>Monitored and maintained computer systems and network infrastructure.</li>
-
-        <li>Troubleshot system, hardware, software and network-related problems.</li>
-
-        <li>Provided PC troubleshooting, Outlook/mail configuration and technical support.</li>
-
-        <li>Installed, configured and troubleshot local and network printers.</li>
-
-        <li>Configured printer sharing and network connectivity.</li>
-
-        <li>Identified appropriate hardware and software solutions based on user requirements.</li>
-
-        <li>Provided technical support for printer-related issues and solutions.</li>
-
-        <li>Worked with IBM software and supported related IT operations.</li>
-
-    </ul>
-
-</div>
-
-</section>
-
-
-<!-- EDUCATION -->
-
-<section id="education">
-
-    <div class="section-title">
-        <h2>Education</h2>
-        <p>Academic Background</p>
-    </div>
-
-    <div class="education-container">
-
-        <div class="card">
-
-            <h3>BSc in Computer Science & Engineering</h3>
-
-            <p>
-                Daffodil International University
-            </p>
-
-            <p>
-                CGPA: 3.00
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>Diploma in Computer Engineering</h3>
-
-            <p>
-                Patuakhali Polytechnic Institute
-            </p>
-
-            <p>
-                CGPA: 3.06
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>Secondary School Certificate</h3>
-
-            <p>
-                Business Studies
-            </p>
-
-            <p>
-                CGPA: 4.56
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- PROJECTS -->
-
-<section id="projects">
-
-    <div class="section-title">
-
-        <h2>IT Projects & Work</h2>
-
-        <p>Selected technical work</p>
-
-    </div>
-
-
-    <div class="projects-container">
-
-
-        <div class="card">
-
-            <h3>IP Printer Configuration</h3>
-
-            <p>
-                Installation and configuration of network printers
-                using IP addresses and troubleshooting printing issues.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>Windows System Setup</h3>
-
-            <p>
-                Windows installation, activation, driver setup,
-                software installation and system configuration.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>Computer Lab Support</h3>
-
-            <p>
-                Maintenance and troubleshooting of computer lab
-                systems and related IT equipment.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>IT Asset Management</h3>
-
-            <p>
-                Hardware inventory management, asset documentation
-                and equipment tracking.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-    <div class="section-title">
-
-        <h2>Contact Me</h2>
-
-        <p>Mobile: 01912913139</p>
-
-    </div>
-
-
-    <div class="contact-info">
-
-        <p>Email:
-            <a href="mailto:jibon.chandra@bracu.ac.bd">
-              jibon.chandra@bracu.ac.bd  
+            <a href="#contact"
+               class="btn btn-primary">
+                Contact Me
             </a>
-        </p>
 
-        <p>Location: Dhaka, Bangladesh</p>
+            <a href="#experience"
+               class="btn btn-outline">
+                View Experience
+            </a>
 
-        <br>
+        </div>
 
-        <a href="mailto:jibon.chandra@bracu.ac.bd" class="btn">
-            Send Email
-        </a>
+
+        <div class="social-links">
+
+            <a href="https://github.com/jibonmali"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                GitHub
+
+            </a>
+
+
+            <!-- Replace YOUR_LINKEDIN_URL -->
+
+            <a href="YOUR_LINKEDIN_URL"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                LinkedIn
+
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                PROFILE
+            </p>
+
+            <h2>
+                About Me
+            </h2>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+            <div class="about-text">
+
+                <p>
+
+                    I am an IT professional currently working as an
+                    <strong>
+                        IT Officer at BRAC Institute of Governance and Development (BIGD), BRAC University.
+                    </strong>
+
+                    I provide day-to-day technical support and help maintain
+                    computer systems, IT equipment and user environments.
+
+                </p>
+
+
+                <p>
+
+                    My practical experience includes hardware and software
+                    troubleshooting, Windows installation and configuration,
+                    printer installation and IP configuration, Microsoft 365
+                    installation, networking support, computer setup and
+                    IT asset management.
+
+                </p>
+
+
+                <p>
+
+                    I enjoy solving technical problems, supporting users and
+                    learning new technologies that improve IT operations.
+
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="info-row">
+
+                    <span>
+                        Current Role
+                    </span>
+
+                    <strong>
+                        IT Officer
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        Organization
+                    </span>
+
+                    <strong>
+                        BIGD, BRAC University
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        Location
+                    </span>
+
+                    <strong>
+                        Dhaka, Bangladesh
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        Focus
+                    </span>
+
+                    <strong>
+                        IT Support & Troubleshooting
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills"
+         class="section section-light">
+
+    <div class="container">
+
+
+        <div class="section-heading center">
+
+            <p class="section-label">
+                EXPERTISE
+            </p>
+
+            <h2>
+                Technical Skills
+            </h2>
+
+            <p>
+                Core IT skills and areas of practical experience
+            </p>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    01
+                </div>
+
+                <h3>
+                    IT Support
+                </h3>
+
+                <p>
+                    End-user support, technical troubleshooting
+                    and day-to-day IT operations.
+                </p>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    02
+                </div>
+
+                <h3>
+                    Hardware
+                </h3>
+
+                <p>
+                    PC, laptop, monitor and peripheral setup,
+                    maintenance and troubleshooting.
+                </p>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    03
+                </div>
+
+                <h3>
+                    Windows
+                </h3>
+
+                <p>
+                    Windows installation, activation, driver setup,
+                    configuration and troubleshooting.
+                </p>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    04
+                </div>
+
+                <h3>
+                    Networking
+                </h3>
+
+                <p>
+                    LAN, IP configuration, connectivity troubleshooting
+                    and basic network support.
+                </p>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    05
+                </div>
+
+                <h3>
+                    Printer Support
+                </h3>
+
+                <p>
+                    Printer installation, IP printer configuration,
+                    sharing and troubleshooting.
+                </p>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    06
+                </div>
+
+                <h3>
+                    Microsoft 365
+                </h3>
+
+                <p>
+                    Microsoft 365 installation, setup and
+                    application support.
+                </p>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    07
+                </div>
+
+                <h3>
+                    Computer Setup
+                </h3>
+
+                <p>
+                    Laptop and desktop setup, software installation
+                    and system configuration.
+                </p>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    08
+                </div>
+
+                <h3>
+                    IT Asset Management
+                </h3>
+
+                <p>
+                    Hardware inventory, documentation, tracking
+                    and equipment management.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EXPERIENCE ================= -->
+
+<section id="experience"
+         class="section">
+
+    <div class="container">
+
+
+        <div class="section-heading center">
+
+            <p class="section-label">
+                CAREER
+            </p>
+
+            <h2>
+                Work Experience
+            </h2>
+
+            <p>
+                Professional IT experience
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <!-- BIGD -->
+
+            <article class="experience-card">
+
+
+                <div class="experience-top">
+
+                    <div>
+
+                        <h3>
+                            IT Officer
+                        </h3>
+
+                        <h4>
+                            BRAC Institute of Governance and Development (BIGD),
+                            BRAC University
+                        </h4>
+
+                    </div>
+
+
+                    <span class="date">
+                        Jan 2025 – Present
+                    </span>
+
+                </div>
+
+
+                <ul>
+
+                    <li>
+                        Provide IT support and technical troubleshooting
+                        for users.
+                    </li>
+
+                    <li>
+                        Maintain computer lab systems, computers
+                        and IT equipment.
+                    </li>
+
+                    <li>
+                        Install and configure Windows operating systems,
+                        drivers and software.
+                    </li>
+
+                    <li>
+                        Install and configure printers and IP-based
+                        network printers.
+                    </li>
+
+                    <li>
+                        Perform hardware and software troubleshooting.
+                    </li>
+
+                    <li>
+                        Install and configure Microsoft 365 applications.
+                    </li>
+
+                    <li>
+                        Support laptop and desktop setup and configuration.
+                    </li>
+
+                    <li>
+                        Maintain IT asset inventory and related documentation.
+                    </li>
+
+                    <li>
+                        Provide technical assistance to students,
+                        faculty and staff.
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+
+            <!-- PREVIOUS JOB -->
+
+            <article class="experience-card">
+
+
+                <div class="experience-top">
+
+                    <div>
+
+                        <h3>
+                            IT & ERP Officer
+                        </h3>
+
+                        <h4>
+                            Noman Home Textile Mills Ltd,
+                            SAAD Group of Industries
+                        </h4>
+
+                    </div>
+
+
+                    <span class="date">
+                        Jan 2021 – May 2024
+                    </span>
+
+                </div>
+
+
+                <ul>
+
+                    <li>
+                        Installed and configured computer hardware,
+                        operating systems and applications.
+                    </li>
+
+                    <li>
+                        Monitored and maintained computer systems
+                        and network infrastructure.
+                    </li>
+
+                    <li>
+                        Troubleshot system, hardware, software and
+                        network-related problems.
+                    </li>
+
+                    <li>
+                        Provided PC troubleshooting, Outlook/mail
+                        configuration and technical support.
+                    </li>
+
+                    <li>
+                        Installed, configured and troubleshot local
+                        and network printers.
+                    </li>
+
+                    <li>
+                        Configured printer sharing and network connectivity.
+                    </li>
+
+                    <li>
+                        Identified suitable hardware and software
+                        solutions based on user requirements.
+                    </li>
+
+                    <li>
+                        Supported printer-related technical issues
+                        and solutions.
+                    </li>
+
+                    <li>
+                        Worked with IBM software and supported
+                        related IT operations.
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section id="education"
+         class="section section-light">
+
+    <div class="container">
+
+
+        <div class="section-heading center">
+
+            <p class="section-label">
+                ACADEMIC
+            </p>
+
+            <h2>
+                Education
+            </h2>
+
+            <p>
+                Academic background
+            </p>
+
+        </div>
+
+
+        <div class="education-grid">
+
+
+            <div class="education-card">
+
+                <span class="education-tag">
+                    BSc
+                </span>
+
+                <h3>
+                    BSc in Computer Science & Engineering
+                </h3>
+
+                <p>
+                    Daffodil International University
+                </p>
+
+                <strong>
+                    CGPA: 3.00
+                </strong>
+
+            </div>
+
+
+
+            <div class="education-card">
+
+                <span class="education-tag">
+                    Diploma
+                </span>
+
+                <h3>
+                    Diploma in Computer Engineering
+                </h3>
+
+                <p>
+                    Patuakhali Polytechnic Institute
+                </p>
+
+                <strong>
+                    CGPA: 3.06
+                </strong>
+
+            </div>
+
+
+
+            <div class="education-card">
+
+                <span class="education-tag">
+                    SSC
+                </span>
+
+                <h3>
+                    Secondary School Certificate
+                </h3>
+
+                <p>
+                    Business Studies
+                </p>
+
+                <strong>
+                    CGPA: 4.56
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects"
+         class="section">
+
+    <div class="container">
+
+
+        <div class="section-heading center">
+
+            <p class="section-label">
+                PRACTICAL WORK
+            </p>
+
+            <h2>
+                IT Projects & Work
+            </h2>
+
+            <p>
+                Selected areas of hands-on technical work
+            </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <article class="project-card">
+
+                <span class="project-number">
+                    01
+                </span>
+
+                <h3>
+                    IP Printer Configuration
+                </h3>
+
+                <p>
+
+                    Installation and configuration of network
+                    printers using IP addresses, including connectivity
+                    and printing issue troubleshooting.
+
+                </p>
+
+                <div class="tags">
+
+                    <span>
+                        Printer
+                    </span>
+
+                    <span>
+                        IP Configuration
+                    </span>
+
+                    <span>
+                        Networking
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="project-card">
+
+                <span class="project-number">
+                    02
+                </span>
+
+                <h3>
+                    Windows System Setup
+                </h3>
+
+                <p>
+
+                    Windows installation, activation, driver setup,
+                    software installation and system configuration.
+
+                </p>
+
+                <div class="tags">
+
+                    <span>
+                        Windows
+                    </span>
+
+                    <span>
+                        Drivers
+                    </span>
+
+                    <span>
+                        Software
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="project-card">
+
+                <span class="project-number">
+                    03
+                </span>
+
+                <h3>
+                    Computer Lab Support
+                </h3>
+
+                <p>
+
+                    Maintenance and troubleshooting of computer lab
+                    systems, computers and related IT equipment.
+
+                </p>
+
+                <div class="tags">
+
+                    <span>
+                        Hardware
+                    </span>
+
+                    <span>
+                        Support
+                    </span>
+
+                    <span>
+                        Maintenance
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="project-card">
+
+                <span class="project-number">
+                    04
+                </span>
+
+                <h3>
+                    IT Asset Management
+                </h3>
+
+                <p>
+
+                    Hardware inventory management, asset documentation,
+                    equipment tracking and IT resource organization.
+
+                </p>
+
+                <div class="tags">
+
+                    <span>
+                        Inventory
+                    </span>
+
+                    <span>
+                        Documentation
+                    </span>
+
+                    <span>
+                        IT Assets
+                    </span>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact"
+         class="contact section">
+
+    <div class="container">
+
+
+        <div class="section-heading center">
+
+            <p class="section-label">
+                GET IN TOUCH
+            </p>
+
+            <h2>
+                Contact Me
+            </h2>
+
+            <p>
+                Feel free to connect with me for professional opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <!-- EMAIL -->
+
+            <a class="contact-card"
+               href="mailto:jibon.chandra@bracu.ac.bd">
+
+                <span class="contact-icon">
+                    @
+                </span>
+
+                <span>
+
+                    <small>
+                        Email
+                    </small>
+
+                    <strong>
+                        jibon.chandra@bracu.ac.bd
+                    </strong>
+
+                </span>
+
+            </a>
+
+
+
+            <!-- PHONE -->
+
+            <a class="contact-card"
+               href="tel:+8801912913139">
+
+                <span class="contact-icon">
+                    ☎
+                </span>
+
+                <span>
+
+                    <small>
+                        Phone
+                    </small>
+
+                    <strong>
+                        +880 1912-913139
+                    </strong>
+
+                </span>
+
+            </a>
+
+
+
+            <!-- GITHUB -->
+
+            <a class="contact-card"
+               href="https://github.com/jibonmali"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span class="contact-icon">
+                    GH
+                </span>
+
+                <span>
+
+                    <small>
+                        GitHub
+                    </small>
+
+                    <strong>
+                        github.com/jibonmali
+                    </strong>
+
+                </span>
+
+            </a>
+
+
+
+            <!-- LINKEDIN -->
+
+            <a class="contact-card"
+               href="YOUR_LINKEDIN_URL"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span class="contact-icon">
+                    in
+                </span>
+
+                <span>
+
+                    <small>
+                        LinkedIn
+                    </small>
+
+                    <strong>
+                        LinkedIn Profile
+                    </strong>
+
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
- 
-    <p>
-        © 2026 Jibon Chandra Mali. All Rights Reserved.
-    </p>
+
+    <div class="container footer-content">
+
+        <p>
+            © 2026 Jibon Chandra Mali. All Rights Reserved.
+        </p>
+
+        <p>
+            IT Officer | IT Support & Technical Troubleshooting
+        </p>
+
+    </div>
 
 </footer>
 
